@@ -158,5 +158,19 @@
 
     });
     </script>
-          
+                       <script>
+              const appElement = document.getElementsByClassName("app")[0];
+              appElement.style.height = `${window.innerHeight}px`;
+              if (screen.width < 768) {
+                try {
+                  document
+                    .getElementsByClassName("dialog")[0]
+                    .classList.remove("custom-scrollbar");
+                } catch (error) {
+                  console.log(error.message);
+                }
+              }
+            </script>
+         
+
 </html>
